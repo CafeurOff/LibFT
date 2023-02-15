@@ -6,11 +6,11 @@
 /*   By: lduthill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 10:25:17 by lduthill          #+#    #+#             */
-/*   Updated: 2023/02/13 13:26:20 by lduthill         ###   ########.fr       */
+/*   Updated: 2023/02/14 10:34:07 by lduthill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <string.h>
+
 void	*ft_memset(void *ptr, int value, size_t count)
 {
 	char	*m;
