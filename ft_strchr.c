@@ -6,7 +6,7 @@
 /*   By: lduthill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 16:50:58 by lduthill          #+#    #+#             */
-/*   Updated: 2023/02/14 12:16:06 by lduthill         ###   ########.fr       */
+/*   Updated: 2023/02/15 15:49:35 by lduthill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -24,5 +24,7 @@ char	*ft_strchr(const char *s, int c)
 		}
 		i++;
 	}
+	if (s[i] == (char)c)
+		return ((char *)s + i);
 	return (NULL);
 }

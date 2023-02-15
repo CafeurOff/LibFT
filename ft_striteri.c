@@ -6,19 +6,19 @@
 /*   By: lduthill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 14:55:43 by lduthill          #+#    #+#             */
-/*   Updated: 2023/02/13 11:11:23 by lduthill         ###   ########.fr       */
+/*   Updated: 2023/02/15 18:32:39 by lduthill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	i;
+	unsigned int	i;
 
 	i = 0;
 	while (s[i] != '\0')
 	{
-		(*f)(i, s);
+		(*f)(i, &s[i]);
 		i++;
 	}
 }

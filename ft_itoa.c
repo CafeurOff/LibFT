@@ -6,7 +6,7 @@
 /*   By: lduthill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:13:45 by lduthill          #+#    #+#             */
-/*   Updated: 2023/02/10 14:20:18 by lduthill         ###   ########.fr       */
+/*   Updated: 2023/02/15 17:22:03 by lduthill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -33,14 +33,14 @@ char	*ft_itoa(int n)
 	int		len;
 
 	rob = 1;
-	len = 0;
+	len = 1;
 	if (n < 0)
 	{
-		len = 1;
+		len = 2;
 		rob = -1;
 	}
 	num = n;
-	while (num % 10 != 0)
+	while (num / 10 != 0)
 	{
 		num /= 10;
 		len++;
