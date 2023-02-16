@@ -6,7 +6,7 @@
 /*   By: lduthill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 09:58:29 by lduthill          #+#    #+#             */
-/*   Updated: 2023/02/15 16:26:17 by lduthill         ###   ########.fr       */
+/*   Updated: 2023/02/16 11:33:34 by lduthill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -15,6 +15,12 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_islower(int c);
 int		ft_toupper(int c);
