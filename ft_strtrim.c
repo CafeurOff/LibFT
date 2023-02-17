@@ -3,72 +3,73 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lduthill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cgeoffra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/07 17:14:28 by lduthill          #+#    #+#             */
-/*   Updated: 2023/02/15 17:01:30 by lduthill         ###   ########.fr       */
+/*   Created: 2023/02/07 17:11:15 by cgeoffra          #+#    #+#             */
+/*   Updated: 2023/02/17 18:18:39 by cgeoffra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-static size_t	starttrim(const char *s1, const char *set)
+static int	setcmp(char const *set, char c)
 {
 	size_t	i;
-	size_t	j;
 
 	i = 0;
-	while (s1[i] != '\0')
+	while (set[i] != '\0')
 	{
-		j = 0;
-		while (set[j] != '\0')
-		{
-			if (s1[i] == set[j])
-				i++;
-			j++;
-		}
+		if (set[i] == c)
+			return (1);
 		i++;
 	}
-	return (i);
+	return (0);
 }
 
-static	size_t	endtrim(const char *s1, const char *set)
+static size_t	ft_start(char const *s1, char const *set)
 {
-	size_t	i;
-	size_t	j;
+	size_t	start;
 
-	i = ft_strlen(s1) - 1;
-	while (i > 0)
+	start = 0;
+	while (s1[start] != '\0')
 	{
-		j = 0;
-		while (set[j] != '\0')
-		{
-			if (s1[i] == set[j])
-				i--;
-			j++;
-		}
-		i--;
+		if (setcmp(set, s1[start]) == 0)
+			return (start);
+		start++;
 	}
-	return (i);
+	return (start);
+}
+
+static size_t	ft_end(char const *s1, char const *set)
+{
+	size_t	end;
+	size_t	len;
+
+	len = ft_strlen(s1) - 1;
+	end = 0;
+	while (len - end > 0)
+	{
+		if (setcmp(set, s1[len - end]) == 0)
+			return (end);
+		end++;
+	}
+	return (end);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-	size_t	j;
-	size_t	o;
-	char	*k;
+	size_t	start;
+	size_t	end;
+	char	*s2;
 
-	i = 0;
-	j = endtrim(s1, set);
-	o = starttrim(s1, set);
-	k = malloc(sizeof(char *) * j);
-	if (k == NULL)
+	if (!s1 || !set)
 		return (NULL);
-	while (i < (j - o))
-	{
-		k[i] = s1[i + o];
-		i++;
-	}
-	k[i] = '\0';
-	return (k);
+	start = ft_start(s1, set);
+	end = ft_end(s1, set);
+	if (start + end >= ft_strlen(s1))
+		return (ft_strdup(""));
+	s2 = (char *)malloc(sizeof(char) * (ft_strlen(s1) - (end + start) + 1));
+	if (!s2)
+		return (NULL);
+	s2 = ft_substr(s1, start, (ft_strlen(s1) - (end + start)));
+	return (s2);
 }

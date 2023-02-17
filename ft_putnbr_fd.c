@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lduthill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cgeoffra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/10 15:58:38 by lduthill          #+#    #+#             */
-/*   Updated: 2023/02/15 18:46:28 by lduthill         ###   ########.fr       */
+/*   Created: 2023/02/15 10:48:57 by cgeoffra          #+#    #+#             */
+/*   Updated: 2023/02/15 10:52:46 by cgeoffra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar(char c, int fd)
 {
@@ -19,9 +19,7 @@ void	ft_putchar(char c, int fd)
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
-	{
 		write(fd, "-2147483648", 11);
-	}
 	else if (n < 0)
 	{
 		ft_putchar('-', fd);
