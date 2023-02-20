@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgeoffra <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lduthill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 10:37:33 by cgeoffra          #+#    #+#             */
-/*   Updated: 2023/02/10 12:04:43 by cgeoffra         ###   ########.fr       */
+/*   Updated: 2023/02/20 17:42:49 by lduthill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strrev(char *str, int a, int n, int num)
