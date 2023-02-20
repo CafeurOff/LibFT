@@ -6,19 +6,13 @@
 /*   By: lduthill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:42:08 by lduthill          #+#    #+#             */
-/*   Updated: 2023/02/16 11:45:22 by lduthill         ###   ########.fr       */
+/*   Updated: 2023/02/20 12:26:14 by lduthill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	size_t	i;
+	t_list	*t;
 
-	i = 0;
-	while (lst[i] != '\0')
-	{
-		new[i] = lst[i];
-		i++;
-	}
-	new[i] = '\0';
+
 }
