@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lduthill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 18:35:02 by cgeoffra          #+#    #+#             */
-/*   Updated: 2023/02/20 17:44:11 by lduthill         ###   ########.fr       */
+/*   Created: 2023/02/21 11:00:44 by lduthill          #+#    #+#             */
+/*   Updated: 2023/02/21 11:00:49 by lduthill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ size_t	ft_strlen(const char *str)
 
 	len = 0;
 	while (str[len] != '\0')
-	{
 		len++;
-	}
 	return (len);
 }
