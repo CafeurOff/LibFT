@@ -3,54 +3,53 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: roroca <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: lduthill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/09 13:33:36 by roroca            #+#    #+#             */
-/*   Updated: 2023/02/23 13:55:01 by roroca           ###   ########.fr       */
+/*   Created: 2023/02/21 11:03:06 by lduthill          #+#    #+#             */
+/*   Updated: 2023/02/21 11:03:08 by lduthill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strrev(char *str, int neg, int n, int len)
+char	*ft_strrev(char *str, int a, int n, int num)
 {
-	str[len] = '\0';
-	len--;
-	while (len >= 0)
+	while (num >= 0)
 	{
-		str[len] = (neg * (n % 10)) + 48;
+		str[num] = (a * (n % 10)) + 48;
 		n /= 10;
-		len--;
+		num--;
 	}
-	if (neg == -1)
+	if (a == -1)
 		str[0] = '-';
 	return (str);
 }
 
 char	*ft_itoa(int n)
 {
-	int		nbr;
-	int		neg;
-	int		len;
 	char	*str;
+	int		num;
+	int		a;
+	int		len;
 
-	nbr = n;
-	neg = 1;
-	len = 0;
+	a = 1;
+	len = 1;
 	if (n < 0)
 	{
-		len++;
-		neg = -1;
+		len = 2;
+		a = -1;
 	}
-	while (nbr >= 10 || nbr <= -10)
+	num = n;
+	while (num / 10 != 0)
 	{
-		nbr /= 10;
+		num /= 10;
 		len++;
 	}
-	len++;
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	str = ft_strrev(str, neg, n, len);
+	str[len] = '\0';
+	num = len - 1;
+	str = ft_strrev(str, a, n, num);
 	return (str);
 }
