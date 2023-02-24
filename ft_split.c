@@ -28,14 +28,6 @@ static int	count_word(char const *s, char c)
 	return (word);
 }
 
-static char	**free_word(char **s)
-{
-	while (*s)
-		free(*s++);
-	free(s);
-	return (NULL);
-}
-
 char	**ft_split(char const *s, char c)
 {
 	int		i;
@@ -57,8 +49,6 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (*s && i)
 			split[j++] = ft_substr(s, 0, i);
-		if (i != 0 && !(split[j - 1]))
-			return (free_word(split));
 		s += i;
 	}
 	split[j] = 0;
