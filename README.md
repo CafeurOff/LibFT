@@ -1,6 +1,6 @@
 # Libft - Projet 42
 
-![42 Logo](https://www.42.fr/wp-content/themes/42/images/42_logo.svg)
+![42 Logo]([https://www.42.fr/wp-content/themes/42/images/42_logo.svg](https://42.fr/wp-content/uploads/2021/05/42-Final-sigle-seul.svg))
 
 ## Introduction
 
@@ -31,7 +31,7 @@ Bienvenue dans le repository du projet Libft de l'école 42. Ce projet a pour ob
        return 0;
    }
 
-4. **Fonctions**
+## **Fonctions**
 
 La bibliothèque Libft contient plusieurs catégories de fonctions :
 - Fonctions de manipulation de mémoire
@@ -42,7 +42,7 @@ La bibliothèque Libft contient plusieurs catégories de fonctions :
 
 Consultez le fichier `libft.h` pour la liste complète des fonctions disponibles.
 
-5. **Comment contribuer**
+## **Comment contribuer**
 
 Si vous souhaitez contribuer à ce projet, veuillez suivre ces étapes :
 1. **Fork ce repository**
