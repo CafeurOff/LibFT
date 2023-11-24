@@ -1,6 +1,6 @@
 # Libft - Projet 42
 
-![42 Logo]([https://www.42.fr/wp-content/themes/42/images/42_logo.svg](https://42.fr/wp-content/uploads/2021/05/42-Final-sigle-seul.svg))
+![42 Logo]([https://www.42.fr/wp-content/themes/42/images/42_logo.svg](https://42.fr/wp-content/uploads/2021/05/42-Final-sigle-seul.svg)
 
 ## Introduction
 
